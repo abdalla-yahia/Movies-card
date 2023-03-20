@@ -1,7 +1,7 @@
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import {Zoom,Flip,Bounce } from 'react-reveal'
+// import {Zoom,Flip,Bounce } from 'react-reveal'
 function FavioretMoveis({cr}) {
     const data = useSelector(state => state.element)
     const {language} = useSelector(state=>state)
@@ -10,7 +10,7 @@ function FavioretMoveis({cr}) {
         return (
                 <Col className='d-flex justify-content-center flex-column align-items-center my-5' >
                     
-                <Zoom>
+                {/* <Zoom> */}
                 <Link to={'/movies/details'} onClick={()=> cr(e)}>
             <div className='cardMovies my-3' >
                 
@@ -24,10 +24,10 @@ function FavioretMoveis({cr}) {
                         </div>
         </div>  
             </Link>
-                </Zoom>
-                <Flip >
+                {/* </Zoom> */}
+                {/* <Flip > */}
                 <Button variant='danger' className='w-100' onClick={() => dispatch({ type: 'del', id: e.id })}>{ language === 'Ar'?'احذف':'Delete'}</Button>
-                </Flip>
+                {/* </Flip> */}
                 </Col>
             )
         })
@@ -35,7 +35,7 @@ function FavioretMoveis({cr}) {
         <Container className='my-5'>
             <Row className='my-5' style={{margin:'150px auto',textAlign:'center',minHeight:'calc(100vh - 100px'}}>
             {language === 'Ar' ? <h1 className='my-5' style={{color:'red',fontWeight:'bolde'}}>الأفلام المفضلة</h1> : <h1 className='my-5' style={{color:'red',fontWeight:'bolde'}}>Favioret Moveis</h1> }
-                {data.length > 0 ?(DB):(language === 'Ar' ?<Bounce ><h1>لا توجد أفلام في المفضلة</h1></Bounce >:<Bounce ><h1>Not Found Favioret Movies</h1></Bounce >)}
+                {data.length > 0 ?(DB):(language === 'Ar' ?/*<Bounce >*/<h1>لا توجد أفلام في المفضلة</h1>/*</Bounce >*/:/*<Bounce >*/<h1>Not Found Favioret Movies</h1>/*</Bounce >*/)}
             </Row>
         </Container>
     );

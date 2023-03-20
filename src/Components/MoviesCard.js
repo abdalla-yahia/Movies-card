@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './MoviesCard.css'
 import {Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { Fade } from 'react-reveal';
+// import { Fade } from 'react-reveal';
 
 function MoviesCard({ e, cr }) {
     const { language } = useSelector(state => state)
@@ -12,7 +12,7 @@ function MoviesCard({ e, cr }) {
     return (
         
         <Col className='d-flex justify-content-center align-items-center flex-column my-5' >
-            <Fade left>
+            {/* <Fade left> */}
                 <Link to={'/movies/details'} onClick={() => { cr(e) }}>
                     <div className='cardMovies my-3' >
             
@@ -31,7 +31,7 @@ function MoviesCard({ e, cr }) {
                 <button className='btn btn-danger' onClick={(th) => {  dispatch({ type: 'del', id: e.id }) }}>{language === "Ar" ? 'احذف من المفضلة' : 'Delete From Fav..'}</button>
                 : <button className='btn btn-warning' onClick={(th) => { dispatch({ type: "Add", ele: e }) }}>{language === "Ar" ? 'أضف للمفضلة' : 'Add To Favioret'}</button>
             }
-            </Fade>
+            {/* </Fade> */}
         </Col>
         
     );

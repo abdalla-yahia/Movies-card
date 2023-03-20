@@ -1,6 +1,6 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { Zoom, Flip } from 'react-reveal'
+// import { Zoom, Flip } from 'react-reveal'
 import { useSelector } from 'react-redux';
 
 function Home({ d, cr }) {
@@ -9,7 +9,7 @@ function Home({ d, cr }) {
         return (
             
             <Col>
-                <Zoom right>
+                {/* <Zoom right> */}
 
                         <Link to={'/movies/details'} onClick={() => cr(e)}>        
             <div className='cardMovies my-3' >
@@ -24,17 +24,17 @@ function Home({ d, cr }) {
                         </div>
         </div>  
             </Link>
-                </Zoom>
+                {/* </Zoom> */}
                 </Col>
       
         )
     })
     return (
         <>
-            <Flip>
+            {/* <Flip> */}
 
             <img className='w-100 ' height={700} src={`https://image.tmdb.org/t/p/w500/`+d[Math.floor(Math.random() * 20 )].poster_path} alt='mainPoster'/>
-            </Flip>
+            {/* </Flip> */}
             <Container>
                 <Row>
             {db}
