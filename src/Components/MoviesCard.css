@@ -1,0 +1,110 @@
+
+.cardMovies {
+    width: 250px;
+    height: 290px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    cursor: pointer;
+}
+
+
+.cardMovies::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .7;
+    background-color: rgb(13, 10, 29);
+    display: none;
+}
+
+.cardMovies > img {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+.details {
+    position: absolute;
+    width:100%;
+    height: 100%;
+    text-align: center;
+    color: aliceblue;
+    background-color: transparent;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    display: none;
+}
+.cardMovies:hover::before,
+.cardMovies:hover .details {
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-details {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    margin-bottom: 30px;
+  
+}
+.card-details::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image:  linear-gradient(360deg, black,rgba(0, 0, 0, 0.227) ,transparent);
+    overflow: hidden;
+}
+.card-details > img {
+    width: 100%;
+    height: 450px;
+}
+
+.card-details:hover::before,
+.card-details:hover p {
+    display: block;
+}
+.details-info {
+    height: 100%;
+    width: 100%;
+    padding: 50px 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.details-info > p{
+    background: transparent;
+    font-size: 30px;
+}
+.span-details {
+    color: rgb(236, 136, 5);
+}
+.lead {
+    letter-spacing: 2px;
+    line-height: 2;
+    color: rgb(255, 145, 0);
+
+}

@@ -1,0 +1,76 @@
+*{
+  font-family: 'Almarai', sans-serif;
+  color: aliceblue;
+  text-decoration: none;
+}
+#root {
+  background-color: #0a1427;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.btn-danger {
+  background-color: red;
+  outline:1px solid white;
+}
+.btn-danger:hover {
+  background-color: rgb(146, 1, 1);
+}
+.btn-warning {
+  background-color: rgb(241, 113, 8);
+  outline:1px solid white;
+}
+.btn-warning:hover {
+  background-color: rgb(194, 166, 6);
+}
+.cont-nav {
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100%;
+  background-color: rgb(241, 113, 8);
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 9999;
+  margin-bottom: 180px;
+}
+.me-auto {
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.lang-nav {
+   display: flex;
+   width: 35%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fav,.favEn {
+  position: relative;
+}
+.fav::before,
+.favEn::before {
+  content:attr(data-count);
+  position: absolute;
+  top: 0;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+  width: 35px;
+  height: 35px;
+  background-color: rgb(165, 5, 5);
+  font-weight: 700;
+  border-top-left-radius: 45%;
+  border-top-right-radius: 45%;
+}
+
+.fav::before{
+  left: -30px;
+  border-bottom-left-radius: 45%;
+}
+.favEn::before{
+  right: -30px;
+  border-bottom-right-radius: 45%;
+}
