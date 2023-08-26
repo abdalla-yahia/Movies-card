@@ -1,8 +1,8 @@
 
 .cardMovies {
-    width: 250px;
-    height: 290px;
-    background-color: antiquewhite;
+    min-width:300px;
+    min-height: 390px;
+    background-color: red;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;

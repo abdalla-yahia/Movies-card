@@ -8,11 +8,11 @@ function FavioretMoveis({cr}) {
     const dispatch = useDispatch()
     const DB = [...new Set(data)].map(e => {
         return (
-                <Col className='d-flex justify-content-center flex-column align-items-center my-5' >
+                <Col className='text-center' >
                     
                 {/* <Zoom> */}
                 <Link to={'/movies/details'} onClick={()=> cr(e)}>
-            <div className='cardMovies my-3' >
+            <div className='m-3 cardMovies' >
                 
                 <img src={`https://image.tmdb.org/t/p/w500/`+e.poster_path
 } alt='gg' />

@@ -11,7 +11,7 @@ function MoviesCard({ e, cr }) {
 
     return (
         
-        <Col className='d-flex justify-content-center align-items-center flex-column my-5' >
+        <Col className='text-center' >
             {/* <Fade left> */}
                 <Link to={'/movies/details'} onClick={() => { cr(e) }}>
                     <div className='cardMovies my-3' >
@@ -28,8 +28,8 @@ function MoviesCard({ e, cr }) {
                 </Link>
             {data.includes(e)
                 ?
-                <button className='btn btn-danger' onClick={(th) => {  dispatch({ type: 'del', id: e.id }) }}>{language === "Ar" ? 'احذف من المفضلة' : 'Delete From Fav..'}</button>
-                : <button className='btn btn-warning' onClick={(th) => { dispatch({ type: "Add", ele: e }) }}>{language === "Ar" ? 'أضف للمفضلة' : 'Add To Favioret'}</button>
+                <button className='btn btn-danger w-100' onClick={(th) => {  dispatch({ type: 'del', id: e.id }) }}>{language === "Ar" ? 'احذف من المفضلة' : 'Delete From Fav..'}</button>
+                : <button className='btn btn-warning w-100' onClick={(th) => { dispatch({ type: "Add", ele: e }) }}>{language === "Ar" ? 'أضف للمفضلة' : 'Add To Favioret'}</button>
             }
             {/* </Fade> */}
         </Col>
